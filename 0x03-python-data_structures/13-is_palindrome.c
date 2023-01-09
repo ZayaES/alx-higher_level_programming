@@ -10,14 +10,14 @@ size_t list_len(listint_t *h)
 {
 	size_t nodes = 0;
 	
-	if(h ==NULL)
+	if(h == NULL)
 		return (0);
-	while(h != NULL)
+	while(h != NULL)
 	{
 		nodes++;
 		h = h->next;
 	}
-	return (nodes);
+	return (nodes);
 }
 
 /** 
@@ -31,13 +31,13 @@ int is_palindrome(listint_t **head)
 	int *nArr, i = 0, j = 0, len = 0;
 	listint_t *temp;
 
-	if (*head == NULL)
-		return (1);
+	if (*head == NULL)
+		return (1);
 	temp = *head;
 	len = list_len(temp);
 	nArr = (int *)malloc(sizeof(int) * len);
 	if(nArr == NULL)
-		return (2);
+		return (2);
 	temp = *head;
 	while(temp != NULL)
 	{
@@ -48,7 +48,7 @@ int is_palindrome(listint_t **head)
 	for(i = 0, j = len - 1; i < j; i++, j--)
 	{
 		if(nArr[i] != nArr[j])
-			return (0);
+			return (0);
 	}
-	return (1);
+	return (1);
 }
