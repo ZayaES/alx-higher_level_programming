@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""This is a module that creates a class 
+"""This is a module that creates a class
 based on 0-square.py
 
 """
+
 
 class Square(object):
     """A class that takes an input
