@@ -5,7 +5,10 @@
 
 
 class MyList(List):
-    """Defines MyList as a List"""
+    """Defines MyList as a List such that it inherits the
+    attribute and methods of List
+
+    """
 
     def print_sorted(self):
         """sorts out list in ascending order"""
