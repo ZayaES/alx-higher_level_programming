@@ -4,7 +4,7 @@
 """Defines a class MyList which inherits from class List"""
 
 
-class MyList(List):
+class MyList(list):
     """Defines MyList as a List such that it inherits the
     attribute and methods of List
 
