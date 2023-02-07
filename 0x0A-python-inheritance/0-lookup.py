@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Author: Zaya Bell
+# Author: Zaya Bell
 """Defines a lookup funtion for objects."""
 
 
