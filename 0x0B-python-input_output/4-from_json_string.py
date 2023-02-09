@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Author: Zaya Bell
 
-"""Defines a function which creates 
+"""Defines a function which creates
     python object from json strings .
 
     """
