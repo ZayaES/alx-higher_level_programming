@@ -10,8 +10,8 @@
 import json
 
 
-def from_json_string(my_obj):
+def from_json_string(my_str):
     """converts json format to python object """
 
-    f = json.load(my_str)
+    f = json.loads(my_str)
     return f
