@@ -3,6 +3,7 @@
 
 """Creates a function that reads file"""
 
+
 def read_file(filename=""):
     """A wrapper function for .read() method."""
 
