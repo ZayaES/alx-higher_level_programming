@@ -10,6 +10,6 @@
 import json
 
 
-def to_json_string(my_obj):
+def to_json_strings(my_obj):
     f = json.dumps(my_obj)
     return f
