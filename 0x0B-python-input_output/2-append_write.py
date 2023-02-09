@@ -4,8 +4,8 @@
 """Creates a function that appends to a  file"""
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
     """A wrapper function for .write() method."""
 
-    with open(filename, "a", encoding="utf-8") as new_file:
-        return (new_file.write(text))
+    with open(filename, "a", encoding="utf-8") as opened_file:
+        return (opened_file.write(text))
