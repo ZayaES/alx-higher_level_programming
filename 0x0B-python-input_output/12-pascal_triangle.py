@@ -5,7 +5,7 @@ def pascal_triangle(n):
         return [1]
     if n == 2:
         return [[1], [1, 1]]
-    
+
     i = 0
     triangle = [[1], [1, 1]]
     for j in range(3, n + 1):
