@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """Creates a pascal triangle"""
 
+
 def pascal_triangle(n):
     """pascal triangle to nth place"""
     if n <= 0:
         return []
     if n == 1:
-        return [1]
+        return [[1]]
     if n == 2:
         return [[1], [1, 1]]
 
