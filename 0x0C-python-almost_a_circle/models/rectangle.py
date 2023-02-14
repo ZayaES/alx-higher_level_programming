@@ -6,6 +6,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """describes a rectangle"""
 
@@ -15,7 +16,7 @@ class Rectangle(Base):
         arguments:
         width: rectangle's width
         height: rectangle's height
-        x: x-cordinate (position of the top left corner of the rectangle) 
+        x: x-cordinate (position of the top left corner of the rectangle)
         y: y-cordinate
         id: identification of the instance
 
@@ -46,8 +47,9 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Set/get the width of the Rectangle."""
         return self.__width
-    
+
     @width.setter
     def width(self, val):
         if not isinstance(val, int):
@@ -58,7 +60,9 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Set/get the height of the Rectangle."""
         return self.__height
+
     @height.setter
     def height(self, val):
         if not isinstance(val, int):
@@ -69,7 +73,9 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Set/get the x coordinate of the Rectangle."""
         return self.__x
+
     @x.setter
     def x(self, val):
         if not isinstance(val, int):
@@ -80,7 +86,9 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Set/get the y coordinate of the Rectangle."""
         return self.__y
+
     @y.setter
     def y(self, val):
         if not isinstance(val, int):
@@ -93,9 +101,9 @@ class Rectangle(Base):
         """Returns the area of the instance object"""
 
         return self.__width * self.__height
-    
+
     def display(self):
-        """Prints the rectangle with character # to 
+        """Prints the rectangle with character # to
             stdout
 
             """
@@ -107,12 +115,27 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
+        """Return the print() and str() representation of the
+        Rectangle.
+
+        """
+
         string = "[Rectangle] (" + str(self.id) + ") " + str(self.__x)
         string += "/" + str(self.__y) + " - " + str(self.__width) + "/"
         string += str(self.__height)
         return string
-    
+
     def update(self, *args, **kwargs):
+        """Update the Rectangle.
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -137,6 +160,8 @@ class Rectangle(Base):
                 self.__y = kwargs[key]
 
     def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
+
         return {
                 "id": self.id,
                 "y": self.y,
