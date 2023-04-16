@@ -6,6 +6,6 @@ exports.converter = function (base) {
       return number;
     } else {
       return (number.toString(base));
-      }
     }
-  }
+  };
+};
