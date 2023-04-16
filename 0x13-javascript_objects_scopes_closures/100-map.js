@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-origList = require('./100-data').list
+const origList = require('./100-data').list;
 
-newList = origList.map(x => x * origList.indexOf(x));
+const newList = origList.map((x, y) => x * y);
 console.log(origList);
 console.log(newList);
