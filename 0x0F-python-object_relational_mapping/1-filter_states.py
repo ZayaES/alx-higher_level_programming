@@ -5,7 +5,7 @@ if __name__ == "__main__":
     import MySQLdb
     import sys
 
-    db = MySQdb.connect(
+    db = MySQLdb.connect(
             host="localhost",
             port=3306,
             user=sys.argv[1],
