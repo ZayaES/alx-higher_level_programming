@@ -15,7 +15,6 @@ if __name__ == "__main__":
     i = 0
     cur = db.cursor()
     state_name = sys.argv[4]
-    print(sys.argv[4][1])
     while(sys.argv[4][i] != ';' and sys.argv[4][i] != ' '):
         if (i == len(sys.argv[4]) - 1):
             break
