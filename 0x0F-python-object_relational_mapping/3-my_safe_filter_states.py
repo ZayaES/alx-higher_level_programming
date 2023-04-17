@@ -19,9 +19,6 @@ if __name__ == "__main__":
         if (i == len(sys.argv[4]) - 1):
             break
         i += 1
-    """if (sys.argv[4][1] != None):
-        exit()"""
-    query_temp = "SELECT * FROM states WHERE name= '{}' ORDER BY id ASC"
     query = query_temp.format(state_name)
     cur.execute(query)
     rows = cur.fetchall()
