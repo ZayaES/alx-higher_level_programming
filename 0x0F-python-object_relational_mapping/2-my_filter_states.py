@@ -21,11 +21,8 @@ if __name__ == "__main__":
 
         for row in rows:
             print(row)
-    except MySQLdb.Error, e:
-        try:
-            print(e.args[0], e.args[1])
-        except IndexError:
-            print(str(e))
+    except Exception:
+        pass
 
     cur.close()
     db.close()
