@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    los = State(name="louisiana")
+    los = State(name="Louisiana")
     session.add(los)
     session.commit()
     print(los.id)
