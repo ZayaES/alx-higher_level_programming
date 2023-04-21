@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Connects to a dtabase and prints thr table states"""
 
 if __name__ == "__main__":
     from sqlalchemy import Integer, String, MetaData, create_engine
