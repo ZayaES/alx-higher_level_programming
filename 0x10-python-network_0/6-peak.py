@@ -28,6 +28,7 @@ def find_peak(list_of_integers):
         del (list_of_integers[1])
     return None
 
+
 def check_start(list_):
     """ checks for peak in the first 2 numbers"""
 
