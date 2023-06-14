@@ -2,6 +2,8 @@
 
 const array = [];
 const len = process.argv.length;
+let arg;
+
 if (len < 4) {
   console.log('0');
 } else {
