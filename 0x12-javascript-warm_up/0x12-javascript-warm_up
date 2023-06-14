@@ -1,0 +1,4 @@
+#!/usr/bin/node
+
+if
+console.log('My number:' + parseInt(process.argv[2]);
