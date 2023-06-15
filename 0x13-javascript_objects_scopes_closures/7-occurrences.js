@@ -4,7 +4,7 @@ exports.nbOccurences = function (list, searchElement) {
   let i = 0;
   let count = 0;
 
-  console.log(list);
+  list.sort();
   while (list[i] !== searchElement) {
     i++;
     if (i === list.length) {
