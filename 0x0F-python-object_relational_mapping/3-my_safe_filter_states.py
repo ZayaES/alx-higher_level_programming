@@ -11,6 +11,14 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
     parameter = (sys.argv[4])
+    i = 0
+    try:
+        while (parameter[i] != ';'):
+            i += 1
+        if (parameter[i + 1]):
+            sys.exit()
+    except IndexError:
+        pass
     try:
         cur.execute("SELECT * FROM states \
                     WHERE BINARY name = '{}' \
@@ -18,6 +26,7 @@ if __name__ == "__main__":
         rows = cur.fetchall()
     except MySQLdb.Error as e:
         print(str(e))
+        sys.exit()
 
     for row in rows:
         print(row)
