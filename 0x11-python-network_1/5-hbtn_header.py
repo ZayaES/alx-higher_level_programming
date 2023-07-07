@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+""" displays the X-Request-Id of requested page """
+
+import sys
+import requests
+
+
+if __name__ == "__main__":
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    r.headers.["X-Request-Id"]
