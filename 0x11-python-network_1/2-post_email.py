@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     values = {'email': email}
     data = urllib.parse.urlencode(values)
-    data = values.encode("ascii")
+    data = data.encode("ascii")
 
     url = urllib.request.Request(url, data)
     with urllib.request.urlopen(url) as response:
