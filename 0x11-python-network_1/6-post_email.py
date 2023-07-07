@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+""" post reques with email sent to url"""
+
+import sys
+import requests
+
+
+if __name__ == "__main__":
+    url = sys.argv[1]
+    data = {'email': sys.argv[2]}
+
+    r = requests.post(url, data)
+    print(r.text)
