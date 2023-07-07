@@ -15,5 +15,4 @@ if __name__ == "__main__":
     data = values.encode('ascii')
     url = urllib.request.Request(url, data)
     with urllib.request.urlopen(url) as response:
-        print(response.read())
-    
+        print(response.read()) 
