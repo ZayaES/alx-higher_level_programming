@@ -7,10 +7,10 @@ import sys
 if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
-    url = "https://api.github.com/{}".format(username)
-    values = {"Authourization": \
-            "Bearer {}".format(password),\
-            "X-GitGub-Api-Version": "2022-11-28"}
+    url = "https://api.github.com/users/{}".format(username)
+    values = {"Authorization":
+              "Bearer {}".format(password),
+              "Accept": "application/vnd.github+json"}
 
     r = requests.get(url, headers=values)
     print(r.json().get("id"))
